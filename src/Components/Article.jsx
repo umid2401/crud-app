@@ -180,17 +180,14 @@ export default function Article() {
             </h2>
             <div className="cars-cards">
               <div className="card">
-                <img src="" alt="" />
+                <img src="Images/image 286.png" alt="" />
                 <h4>TANK 300</h4>
               </div>
               <div className="card">
-                <img src="" alt="" />
+                <img src="Images/mage.png" alt="" />
                 <h4>TANK 500</h4>
               </div>
-              <div>
-                <img src="Images/settings.png" alt="" />
-                <h3>Тест-драйв</h3>
-              </div>
+            
             </div>
           </div>
         </div>
@@ -198,6 +195,11 @@ export default function Article() {
       <section className="complect">
         <div className="wrapper">
           <h2>ПОДБЕРИТЕ КОМПЛЕКТАЦИЮ</h2>
+          <div className="select-group">
+          <div className="card">
+             <p></p>
+          </div>
+          </div>
           <div className="cards">
             <div className="card">
               <div className="img">
