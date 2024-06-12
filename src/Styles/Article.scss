@@ -1,0 +1,339 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+@font-face {
+  font-family: "tankBold";
+  src: url("../../public/Fonts/TT\ TANK\ Bold.ttf");
+}
+@font-face {
+  font-family: "tanklight";
+  src: url("../../public/Fonts/TT\ TANK\ Light.ttf");
+}
+@font-face {
+  font-family: "tankMed";
+  src: url("../../public/Fonts/TT\ TANK\ Medium.ttf");
+}
+$tankBold: "tankBold";
+$tankReg: "tanklight";
+$tankMed: "tankMed";
+@mixin flexbetwen {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@mixin flexStart {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+@mixin button {
+  display: block;
+  padding: 0.7rem 1.5rem;
+  background: rgba(255, 149, 73, 1);
+  color: rgba(24, 24, 24, 1);
+  font-family: $tankMed;
+  border-radius: 0.8rem;
+  outline: none;
+  transition: 0.3s ease-in-out;
+  text-align: center;
+  font-size: clamp(14px, 4vw, 17px);
+  &:hover {
+    background: rgb(71, 77, 138);
+  }
+}
+@mixin wrapper {
+  width: 85%;
+  margin: 0 auto;
+
+//   @media screen and (max-width: "992px") {
+//     width: 90%;
+//     margin: 0 auto;
+//     padding: 0;
+//   }
+//   @media screen and (max-width: "768px") {
+//     width: 650px;
+//     margin: 0 auto;
+//     padding: 0;
+//   }
+  @media screen and (max-width: "576px") {
+    width: 100%;
+    margin: 0 auto;
+    padding: .5rem .8rem;
+  }
+}
+@mixin pi {
+  color: rgba(147, 150, 151, 1);
+  font-size: clamp(14px, 4vw, 16px);
+}
+@mixin h2 {
+  font-weight: 700;
+  font-size: clamp(24px, 4vw, 24px);
+  color: rgba(255, 255, 255, 1);
+}
+
+.header {
+  background: rgba(24, 24, 24, 1);
+  width: 100%;
+  .header-wrapper {
+    @include flexStart();
+    @include wrapper();
+    gap: 1rem;
+    padding: 0.5rem 0;
+    .left-content {
+      img {
+        width: 48px;
+      }
+    }
+    .right-content {
+      width: 95%;
+      .top-content,
+      .bottom-content {
+        @include flexbetwen();
+      }
+      .top-content {
+        .box-left,
+        .box-right {
+          @include flexStart();
+        }
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        padding: 0.5rem 0;
+        margin-bottom: 0.5rem;
+        .box-left {
+          p {
+            @include pi();
+          }
+        }
+        .box-right {
+          @include flexStart();
+          gap: 1rem;
+          .box-content {
+            @include flexStart();
+            gap: 0.6rem;
+            h3 {
+              color: rgba(255, 255, 255, 1);
+              font-size: clamp(14px, 4vw, 16px);
+              font-family: $tankMed;
+            }
+          }
+        }
+      }
+      .bottom-content {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        .left-content {
+          @include flexStart();
+          gap: 1rem;
+          h2 {
+            @include h2();
+            font-family: $tankBold;
+            white-space: nowrap;
+            padding: 0;
+          }
+          p {
+            @include pi();
+            color: rgba(255, 255, 255, 1);
+            white-space: nowrap;
+            font-size: 18px;
+            font-family: $tankReg;
+          }
+        }
+        .right-content {
+          @include flexStart();
+          justify-content: right;
+          align-items: center;
+          gap: 2rem;
+          .number {
+            h3 {
+              color: rgba(255, 255, 255, 1);
+              font-size: clamp(14px, 4vw, 17px);
+            }
+            p {
+              @include pi();
+              font-family: $tankReg;
+              cursor: pointer;
+            }
+          }
+          .button {
+            button {
+              @include button();
+              display: flex;
+              align-items: center;
+              gap: 0.5rem;
+            }
+          }
+        }
+        .hide{
+            display: none;
+            align-items: center;
+            gap: 1rem;
+            img{
+                cursor: pointer;
+            }
+        }
+      }
+    }
+  }
+  .mobile-menu{
+    width: 100%;
+    position: absolute;
+    padding: 1rem .8rem;   
+    z-index: 10;
+    background: rgba(24, 24, 24, 1);
+     display: flex;
+     justify-content: center;
+     align-content: center;
+    .menu{
+        .tank{
+            margin: 1rem 0;
+            h2 {
+                @include h2();
+                font-family: $tankBold;
+                white-space: nowrap;
+                padding: 0;
+                line-height: 20px
+              }
+              p {
+                @include pi();
+                color: rgba(255, 255, 255, 1);
+                white-space: nowrap;
+                font-size: 18px;
+                font-family: $tankReg;
+                line-height: 30px
+              }
+        }
+        .number{
+            margin: 1rem 0;
+            h3 {
+                color: rgba(255, 255, 255, 1);
+                font-size: clamp(14px, 4vw, 17px);
+              }
+              p {
+                @include pi();
+                font-family: $tankReg;
+                cursor: pointer;
+              }
+        }
+        .location{
+            margin: 1rem 0;
+            display: flex;
+            align-items: center;
+            gap: .5rem;
+           .img{
+            
+           }
+            p {
+                width: 80%;
+                @include pi();
+                color: rgba(147, 150, 151, 1);
+                
+              }
+        }
+        .bottom{
+            width: 100%;
+            margin-top: 3rem;
+            margin: 0 auto;
+            text-align: center;
+            .button{
+                button{
+                    @include button();
+                    display: flex;
+                    align-items: center;
+                    gap: 1rem;
+                }
+            }
+            .service, .test {
+                @include flexStart();
+              
+                margin: 1rem 0;
+                gap: 0.6rem;
+                h3 {
+                  color: rgba(255, 255, 255, 1);
+                  font-size: clamp(14px, 4vw, 16px);
+                  font-family: $tankMed;
+                  text-align: center;
+                }
+              }
+           
+        }
+    }
+  }
+}
+@media screen and (max-width:"992px") {
+    .header{
+        .header-wrapper{
+            gap: .7rem;
+            .left-content{
+                img{
+                    width: 36px;
+                }
+            }
+            .right-content{
+                .top-content{
+                    display: none;
+                }
+                .bottom-content{
+                    .left-content{
+                      flex-direction: column;
+                      gap: 0;
+                      h2{
+                        font-size: 18px;
+                        line-height: 20px;
+                      }
+                      p{
+                        font-size: 14px;
+                        line-height: 20px;
+                      }
+                    }
+                    .right-content{
+                        display: none;
+                    }
+                    .hide{
+                        display: flex;
+                        gap: .8rem;
+                    }
+                }
+            }
+        }
+    }
+    
+}
+.main {
+  background-image: url("../../public/Images/image.png");
+  width: 100%;
+  height: 560px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  .main-wrapper {
+    @include wrapper();
+    height: 100%;
+    position: relative;
+    .text {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      h1 {
+        @include h2();
+        font-size: clamp(30px, 4vw, 40px);
+        font-family: $tankBold;
+        line-height: 45px;
+        margin: 1rem 0;
+      }
+      p{
+        @include pi();
+        font-size: clamp(20px, 4vw, 28px);
+        color: rgba(255, 255, 255, 1);
+        font-family: $tankReg;
+        line-height: 30px;
+        margin: 1rem 0;
+
+      }
+      button{
+        @include button();
+        margin-top: 3rem;
+      }
+    }
+  }
+}
