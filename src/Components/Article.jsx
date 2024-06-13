@@ -187,7 +187,6 @@ export default function Article() {
                 <img src="Images/mage.png" alt="" />
                 <h4>TANK 500</h4>
               </div>
-            
             </div>
           </div>
         </div>
@@ -196,9 +195,37 @@ export default function Article() {
         <div className="wrapper">
           <h2>ПОДБЕРИТЕ КОМПЛЕКТАЦИЮ</h2>
           <div className="select-group">
-          <div className="card">
-             <p></p>
-          </div>
+            <div className="card">
+              <p>Марка</p>
+              <select name="" id="">
+                <option value=""></option>
+                <option value="">Tanka</option>
+                <option value="">Tanka</option>
+                <option value="">Tanka</option>
+                <option value="">Tanka</option>
+              </select>
+            </div>
+            <div className="card">
+              <p>Марка</p>
+              <select name="" id="">
+                <option value=""></option>
+                <option value="">Tanka</option>
+                <option value="">Tanka</option>
+                <option value="">Tanka</option>
+                <option value="">Tanka</option>
+              </select>
+            </div>
+
+            <div className="card">
+              <p>Комплектация</p>
+              <select name="" id="">
+                <option value=""></option>
+                <option value="">Tanka</option>
+                <option value="">Tanka</option>
+                <option value="">Tanka</option>
+                <option value="">Tanka</option>
+              </select>
+            </div>
           </div>
           <div className="cards">
             <div className="card">
@@ -395,15 +422,94 @@ export default function Article() {
                 </div>
                 <div className="card">
                   <button>
-                  <span>Заказать звонок</span>
-                  <img src="Images/chevron-right.png" alt="" />
+                    <span>Заказать звонок</span>
+                    <img src="Images/chevron-right.png" alt="" />
                   </button>
                 </div>
               </div>
             </div>
           </div>
+          <div className="text">
+            <h3>
+              Дисклеймеp <span></span>
+            </h3>
+            <p>
+              TANK 300 за 3 799 000руб с учетом поддержек. Цена на модель TANK
+              (ТЭНК) 300 в комплектации Adventure (Эдвенчер) с двигателем 2,0T
+              4WD, 2023 года производства, цвет автомобиля: белый, с учетом
+              выгоды по трейд-ин 300 000 рублей. В трейд-ин принимаются
+              автомобили с пробегом со сроком владения и регистрации (постановки
+              на учет) в органах ГИБДД не менее 6 месяцев (в отношении
+              автомобилей бренда TANK, Haval, Great Wall – 3 месяца) до сдачи
+              автомобиля в трейд-ин. В качестве документов, подтверждающих срок
+              владения сдаваемого в трейд-ин автомобиля, собственнику необходимо
+              предоставить копию ПТС или СТС или карточку учета ТС из ГИБДД с
+              печатью и подписью. Подробности уточняйте у менеджеров отдела
+              продаж TANK АВТОРУСЬ. Предложение ограничено, не является офертой
+              и действует с 01.04.2024г. T
+            </p>
+            <p>
+              TANK 500 за 5 349 000 руб с учетом поддержек. Цена на модель TANK
+              (ТЭНК) 500 в комплектации Adventure (Эдвенчер) с двигателем 3,0T
+              4WD, 2023 года производства, цвет автомобиля: белый, с учетом
+              прямой выгоды в 950 000 рублей. Подробности уточняйте у менеджеров
+              отдела продаж TANK АВТОРУСЬ. Предложение ограничено, не является
+              офертой и действует с 01.04.2024г.
+            </p>
+          </div>
         </div>
       </section>
+      <footer className="footer">
+        <div className="wrapper">
+          <div className="top-content">
+            <div className="left-content">
+              <h2>АВТОРУСЬ TANK</h2>
+              <p>Официальный дилер</p>
+            </div>
+            <div className="right-content">
+              <div className="number">
+                <h3>+7 (999) 999-99-99</h3>
+                <p> Мы на связи</p>
+              </div>
+              <div className="button">
+                <button>
+                  <img src="Images/Icon.png" alt="" />
+                  <span>Заказать звонок</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div className="bottom-content">
+          <div className="box-left">
+                <img src="Images/location.png" alt="" />
+                <p>Ярославское шоссе, владение 2 В, строение 3 (МКАД, 95 км)</p>
+              </div>
+              <div className="box-right">
+                <div className="box-content">
+                  <img src="Images/settings.png" alt="" />
+                  <h3>Записаться на сервис</h3>
+                </div>
+                <div className="box-content">
+                  <img src="Images/settings.png" alt="" />
+                  <h3>Тест-драйв</h3>
+                </div>
+              </div>
+          </div>
+          <div className="content">
+            <p>Официальный дилер</p>
+            <h3>ООО А АВТОРУСЬ МЫТИЩИ | ОГРН - 1147746695161, ИНН - 7728881903</h3>
+          </div>
+        </div>
+        <div className="bottom">
+          <div className="left">
+            <p>© 2024, АВТОРУСЬ ТАНК</p>
+          </div>
+          <div className="right">
+            <p>Правовая информация</p>
+            <p>Условия акции</p>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
